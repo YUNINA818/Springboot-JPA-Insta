@@ -28,29 +28,29 @@ public class ImageController {
 	private ImageRepository imageRepository;
 	
 	@Autowired
-	private TagRepository tegRepository;
+//	private TagRepository tegRepository;
 	
 	@PostMapping("/image/upload")
 	public ResponseEntity<Resource> uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
 		//FileInputStream inputStream = (FileInputStream) file.getInputStream();
 		
 		Image image = new Image();
-	    image.setFile(file.getBytes());
-	    image.setCaption("git 집필 자료 사진");
-	    image.setLocation("부산 어딘가");
+//	    image.setFile(file.getBytes());
+//	    image.setCaption("git 집필 자료 사진");
+//	    image.setLocation("부산 어딘가");
 	    
 	    List<Tags> list = new ArrayList<>();
 	    Tags tag1 = new Tags();
 	    Tags tag2 = new Tags();
-	    tag1.setName("Git");
-	    tag2.setName("버전관리");
+//	    tag1.setName("Git");
+//	    tag2.setName("버전관리");
 	    list.add(tag1);
 	    list.add(tag2);
 	   
-	    imageRepository.save(image);
-	    for(Tags tag : list) {
-	    	TagRepository.save(tag);
-	    }
+//	    imageRepository.save(image);
+//	    for(Tags tag : list) {
+//	    	TagRepository.save(tag);
+//	    }
 	    
 	    return  ResponseEntity.ok()
                 .contentType(MediaType.parseMediaType(file.getContentType()))
