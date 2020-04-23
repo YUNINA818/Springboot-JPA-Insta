@@ -24,10 +24,10 @@ import com.lifefrom.insta.repository.TagRepository;
 @RestController
 public class ImageController {
 
-	@Autowired
-	private ImageRepository imageRepository;
+//	@Autowired
+//	private ImageRepository imageRepository;
 	
-	@Autowired
+//	@Autowired
 //	private TagRepository tegRepository;
 	
 	@PostMapping("/image/upload")
